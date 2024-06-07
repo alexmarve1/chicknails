@@ -996,6 +996,10 @@ footer .container {
   font-size: 14px;
   padding: 10px 30px;
 }
-
-
+.about__inner-right-home{
+  display: none;
+}
+.slick-prev, .slick-next {
+  display: none;
+}
 }
