@@ -21,7 +21,15 @@ const swiper = new Swiper('.swiper',{
 
 });
 
-$('.single-item').slick();
+$('.single-item').slick({
+  dots: true,
+  responsive: [
+    {
+        breakpoint: 768,
+        settings: {
+            arrows: false,
+        }}]
+});
 // плавная прокрутка
 const anchors = document.querySelectorAll('a[href*="#"]') //добавляем все ссылки в переменную
 for(let anchor of anchors) {                      //прогоняем каждую ссылку в цикле
