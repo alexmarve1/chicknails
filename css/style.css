@@ -656,7 +656,10 @@ table tr:nth-child(odd) {
 .place__title__inner {
   margin-bottom: 20px;
 }
-
+.slick-dots li button:before {
+  top: 20px;
+  font-size: 10px;
+}
 iframe {
   border-radius: 25px;
   margin-top: 50px;
@@ -870,9 +873,9 @@ footer .container {
 }
 
 @media (max-width: 550px) {
-  .slick-prev, 
-  .slick-next,
-  .slick-arrow{
+  .slick-prev,
+   .slick-next
+ {
     display: none;
   }
   .header__top-inner {
@@ -971,12 +974,15 @@ footer .container {
 .place__inner-2-phone__wp{
   flex-direction: column;
 }
-.place__title__inner{
-  margin-top: 0px;
-}
+
 .place__title__inner {
+  padding-top: 0px;
+}
+.place__title2 .place__title__inner{
   padding-top: 50px;
 }
+
+
 .place__container__inner2 {
   text-align: center;
 }
@@ -1001,7 +1007,5 @@ footer .container {
 .about__inner-right-home{
   display: none;
 }
-.slick-prev, .slick-next {
-  display: none;
-}
+
 }
