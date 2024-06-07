@@ -16,10 +16,28 @@ const swiper = new Swiper('.swiper',{
     el: '.swiper-pagination', 
   },  
   autoplay: {
-    delay: 3000,
+    delay: 2000,
   },
 
 });
 
 $('.single-item').slick();
+// плавная прокрутка
+const anchors = document.querySelectorAll('a[href*="#"]') //добавляем все ссылки в переменную
+for(let anchor of anchors) {                      //прогоняем каждую ссылку в цикле
+  anchor.addEventListener('click', function(e){   
+    e.preventDefault();//для каждой ссылки при клике удаляется стандартное поведение
+    const blockID = anchor.getAttribute('href')
+    document.querySelector('' + blockID).scrollIntoView({
+      behavior: "smooth",
+    });
+  })
+}
+$(document).ready(function(){
+  $('.header__burger').click(function(event){
+    $('.header__burger,.header__nav').toggleClass('active');
+  });
+});
+
+
 
